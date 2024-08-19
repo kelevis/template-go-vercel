@@ -88,7 +88,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// 修改后的 `main` 函数
 func main() {
-	bridge.Start(Handler)
+	// 将 Handler 函数转换为 http.HandlerFunc
+	bridge.Start(http.HandlerFunc(Handler))
 }
-
