@@ -78,7 +78,7 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 }
 
 // Lambda 入口函数
-func Handler(w http.ResponseWriter, r *http.Request) {
+func Ws(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/api/ws/" || len(r.URL.Path) > len("/api/ws/") {
 		handleConnections(w, r)
 	} else {
